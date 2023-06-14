@@ -1,6 +1,8 @@
 <script>
 import axios from "axios";
 import ProjectCard from "./components/ProjectCard.vue";
+import HeaderComponent from "./components/HeaderComponent.vue";
+
 
 export default {
   name: "App",
@@ -31,13 +33,8 @@ export default {
 </script>
 
 <template>
-  <div>
-    <div class="container">
-      <div class="row">
-        <ProjectCard />
-      </div>
-    </div>
-  </div>
+  <HeaderComponent></HeaderComponent>
+  <router-view></router-view>
 </template>
 
 

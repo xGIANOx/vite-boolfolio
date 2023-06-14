@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import ProjectView from "./views/ProjectView.vue";
 
 const router = createRouter({
     history: createWebHistory(),
