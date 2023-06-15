@@ -11,9 +11,6 @@ export default {
       <router-link class="text-decoration-none text-white" :to="{ name: 'home' }">
         HOME
       </router-link>
-      <router-link class="text-decoration-none text-white" :to="{ name: 'project-view' }">
-        PROJECTS
-      </router-link>
     </div>
   </nav>
 </header>

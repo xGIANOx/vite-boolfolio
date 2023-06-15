@@ -2,8 +2,8 @@
 import ProjectCard from "../components/ProjectCard.vue";
 import axios from "axios";
 export default {
-    name: "ProjectView",
-    components: {
+    name: "HomeView",
+components: {
     ProjectCard,
 },
    
@@ -12,4 +12,5 @@ export default {
 
 <template>
     <h1>YOU ARE IN THE HOME PAGE</h1>
+    <ProjectCard></ProjectCard>
 </template>

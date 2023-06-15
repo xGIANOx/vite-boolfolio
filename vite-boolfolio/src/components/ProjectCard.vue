@@ -39,7 +39,7 @@ import axios from "axios";
 
 <header>
 
-  
+
 
 </header>
 
@@ -52,6 +52,9 @@ import axios from "axios";
                 {{ project.title }}
               </div>
               <img class="w-100" :src="project.img" :alt="project.title">
+              <div class="card-footer">
+                <router-link class="text-decoration-none" :to="{ name: 'project-view', params: {title: project.title}}">VIEW PROJECT</router-link>
+              </div>
             </div>
           </div>
         </div>

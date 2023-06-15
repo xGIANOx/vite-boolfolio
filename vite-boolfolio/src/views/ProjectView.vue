@@ -1,26 +1,23 @@
 <script>
-import ProjectCard from "../components/ProjectCard.vue";
 import axios from "axios";
 export default {
     name: "ProjectView",
     components: {
-    ProjectCard,
 },
     data() {
     return {
       base_URL: "http://127.0.0.1:8000/",
       projects_path: "api/projects",
       loading: true,
-      projects: [],
+      project: [],
     };
   },
   mounted() {
-    const completeUrl = this.base_URL + this.projects_path;
     axios
-      .get(completeUrl)
+      .get(this.base_URL + this.projects_path + '/' + this.$route.params.title)
       .then((response) => {
-        this.projects = response.data.projects.data;
-        console.log(this.projects);
+        this.project = response.data.project;
+        console.log(this.project);
       })
       .catch((error) => {
         console.error(error);
@@ -29,6 +26,13 @@ export default {
 }
 </script>
 
-<template>
-    <ProjectCard></ProjectCard>
+
+    
+
+ <template>
+  <div class="container py-5" v-if="project">
+    <h1 class="text-center">{{ project.title }}</h1>
+  </div>
 </template>
+    
+
