@@ -34,7 +34,6 @@ export default {
 </script>
 
 <template>
-  <HeaderComponent></HeaderComponent>
   <router-view></router-view>
 </template>
 
